@@ -42,6 +42,9 @@ payment, crypto и dispute-провайдеров для лицензирова�
 - [`docs/30-day-validation-plan.md`](docs/30-day-validation-plan.md) — первый рыночный эксперимент.
 - [`docs/decision-log.md`](docs/decision-log.md) — принятые решения и причины.
 - [`docs/session-handoff.md`](docs/session-handoff.md) — текущие результаты и следующий шаг.
+- [`docs/workstreams/README.md`](docs/workstreams/README.md) — разделение работы между двумя устройствами.
+- [`docs/workstreams/provider-side.md`](docs/workstreams/provider-side.md) — поток поиска и квалификации провайдеров.
+- [`docs/workstreams/merchant-side.md`](docs/workstreams/merchant-side.md) — поток подготовки и проверки merchant demand.
 
 ## Приватность
 
@@ -55,9 +58,11 @@ payment, crypto и dispute-провайдеров для лицензирова�
 1. Клонировать репозиторий и открыть его в Codex как проект.
 2. В начале работы выполнить `git pull --ff-only`.
 3. Попросить Codex прочитать `AGENTS.md` и `docs/session-handoff.md`.
-4. После значимой сессии обновить `docs/session-handoff.md`; при новом решении
-   также обновить `docs/decision-log.md`.
-5. Проверить diff на персональные данные и секреты, затем сделать commit и push.
+4. Выбрать свой поток в `docs/workstreams/README.md` и работать только в его
+   короткой ветке и файлах.
+5. После сессии обновить файл своего потока и сделать commit/push.
+6. Общие `session-handoff.md` и `decision-log.md` обновлять отдельной
+   integration-сессией после объединения рабочих веток.
 
 Если два устройства работают одновременно, каждое использует отдельную короткую
 ветку, а не редактирует `main` параллельно.
